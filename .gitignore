@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.egg
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Java
+backend/target/
+*.class
+*.jar
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# Temp files
+temp_*.json

@@ -1,0 +1,86 @@
+{"text": "红杉资本投资字节跳动A轮", "tokens": ["红", "杉", "资", "本", "投", "资", "字", "节", "跳", "动", "A", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "字节跳动"}]}
+{"text": "DST领投字节跳动B轮", "tokens": ["D", "S", "T", "领", "投", "字", "节", "跳", "动", "B", "轮"], "triple_set": [{"subject": "DST Global", "relation": "LEAD", "object": "字节跳动"}]}
+{"text": "红杉资本领投字节跳动C轮", "tokens": ["红", "杉", "资", "本", "领", "投", "字", "节", "跳", "动", "C", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "字节跳动"}]}
+{"text": "KKR领投字节跳动D轮", "tokens": ["K", "K", "R", "领", "投", "字", "节", "跳", "动", "D", "轮"], "triple_set": [{"subject": "KKR", "relation": "LEAD", "object": "字节跳动"}]}
+{"text": "红杉资本投资快手A轮", "tokens": ["红", "杉", "资", "本", "投", "资", "快", "手", "A", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "快手"}]}
+{"text": "晨兴资本领投快手B轮", "tokens": ["晨", "兴", "资", "本", "领", "投", "快", "手", "B", "轮"], "triple_set": [{"subject": "晨兴资本", "relation": "LEAD", "object": "快手"}]}
+{"text": "腾讯领投快手D轮", "tokens": ["腾", "讯", "领", "投", "快", "手", "D", "轮"], "triple_set": [{"subject": "腾讯", "relation": "LEAD", "object": "快手"}]}
+{"text": "创新工场天使投资知乎", "tokens": ["创", "新", "工", "场", "天", "使", "投", "资", "知", "乎"], "triple_set": [{"subject": "创新工场", "relation": "LEAD", "object": "知乎"}]}
+{"text": "启明创投领投知乎B轮", "tokens": ["启", "明", "创", "投", "领", "投", "知", "乎", "B", "轮"], "triple_set": [{"subject": "启明创投", "relation": "LEAD", "object": "知乎"}]}
+{"text": "腾讯领投知乎C轮", "tokens": ["腾", "讯", "领", "投", "知", "乎", "C", "轮"], "triple_set": [{"subject": "腾讯", "relation": "LEAD", "object": "知乎"}]}
+{"text": "真格基金天使投资小红书", "tokens": ["真", "格", "基", "金", "天", "使", "投", "资", "小", "红", "书"], "triple_set": [{"subject": "真格基金", "relation": "LEAD", "object": "小红书"}]}
+{"text": "金沙江创投领投小红书C轮", "tokens": ["金", "沙", "江", "创", "投", "领", "投", "小", "红", "书", "C", "轮"], "triple_set": [{"subject": "金沙江创投", "relation": "LEAD", "object": "小红书"}]}
+{"text": "高瓴资本领投小红书D轮", "tokens": ["高", "瓴", "资", "本", "领", "投", "小", "红", "书", "D", "轮"], "triple_set": [{"subject": "高瓴资本", "relation": "LEAD", "object": "小红书"}]}
+{"text": "高榕资本领投拼多多A轮", "tokens": ["高", "榕", "资", "本", "领", "投", "拼", "多", "多", "A", "轮"], "triple_set": [{"subject": "高榕资本", "relation": "LEAD", "object": "拼多多"}]}
+{"text": "IDG资本领投拼多多B轮", "tokens": ["I", "D", "G", "资", "本", "领", "投", "拼", "多", "多", "B", "轮"], "triple_set": [{"subject": "IDG资本", "relation": "LEAD", "object": "拼多多"}]}
+{"text": "红杉资本领投拼多多C轮", "tokens": ["红", "杉", "资", "本", "领", "投", "拼", "多", "多", "C", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "拼多多"}]}
+{"text": "联想创投领投每日优鲜B轮", "tokens": ["联", "想", "创", "投", "领", "投", "每", "日", "优", "鲜", "B", "轮"], "triple_set": [{"subject": "联想创投", "relation": "LEAD", "object": "每日优鲜"}]}
+{"text": "老虎基金领投每日优鲜C轮", "tokens": ["老", "虎", "基", "金", "领", "投", "每", "日", "优", "鲜", "C", "轮"], "triple_set": [{"subject": "老虎基金", "relation": "LEAD", "object": "每日优鲜"}]}
+{"text": "今日资本领投叮咚买菜B轮", "tokens": ["今", "日", "资", "本", "领", "投", "叮", "咚", "买", "菜", "B", "轮"], "triple_set": [{"subject": "今日资本", "relation": "LEAD", "object": "叮咚买菜"}]}
+{"text": "红杉资本领投叮咚买菜C轮", "tokens": ["红", "杉", "资", "本", "领", "投", "叮", "咚", "买", "菜", "C", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "叮咚买菜"}]}
+{"text": "鼎晖投资领投商汤科技B轮", "tokens": ["鼎", "晖", "投", "资", "领", "投", "商", "汤", "科", "技", "B", "轮"], "triple_set": [{"subject": "鼎晖投资", "relation": "LEAD", "object": "商汤科技"}]}
+{"text": "阿里巴巴领投商汤科技C轮", "tokens": ["阿", "里", "巴", "巴", "领", "投", "商", "汤", "科", "技", "C", "轮"], "triple_set": [{"subject": "阿里巴巴", "relation": "LEAD", "object": "商汤科技"}]}
+{"text": "软银愿景基金领投商汤科技D轮", "tokens": ["软", "银", "愿", "景", "基", "金", "领", "投", "商", "汤", "科", "技", "D", "轮"], "triple_set": [{"subject": "软银愿景基金", "relation": "LEAD", "object": "商汤科技"}]}
+{"text": "创新工场天使投资旷视科技", "tokens": ["创", "新", "工", "场", "天", "使", "投", "资", "旷", "视", "科", "技"], "triple_set": [{"subject": "创新工场", "relation": "LEAD", "object": "旷视科技"}]}
+{"text": "蚂蚁金服领投旷视科技D轮", "tokens": ["蚂", "蚁", "金", "服", "领", "投", "旷", "视", "科", "技", "D", "轮"], "triple_set": [{"subject": "蚂蚁金服", "relation": "LEAD", "object": "旷视科技"}]}
+{"text": "中国互联网投资基金领投云从科技B轮", "tokens": ["中", "国", "互", "联", "网", "投", "资", "基", "金", "领", "投", "云", "从", "科", "技", "B", "轮"], "triple_set": [{"subject": "中国互联网投资基金", "relation": "LEAD", "object": "云从科技"}]}
+{"text": "国新基金领投云从科技C轮", "tokens": ["国", "新", "基", "金", "领", "投", "云", "从", "科", "技", "C", "轮"], "triple_set": [{"subject": "国新基金", "relation": "LEAD", "object": "云从科技"}]}
+{"text": "高瓴资本领投依图科技C轮", "tokens": ["高", "瓴", "资", "本", "领", "投", "依", "图", "科", "技", "C", "轮"], "triple_set": [{"subject": "高瓴资本", "relation": "LEAD", "object": "依图科技"}]}
+{"text": "阿里云峰基金领投百川智能A轮", "tokens": ["阿", "里", "云", "峰", "基", "金", "领", "投", "百", "川", "智", "能", "A", "轮"], "triple_set": [{"subject": "阿里云峰基金", "relation": "LEAD", "object": "百川智能"}]}
+{"text": "红杉资本领投月之暗面A轮", "tokens": ["红", "杉", "资", "本", "领", "投", "月", "之", "暗", "面", "A", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "月之暗面"}]}
+{"text": "启明创投领投智谱AI B轮", "tokens": ["启", "明", "创", "投", "领", "投", "智", "谱", "A", "I", " ", "B", "轮"], "triple_set": [{"subject": "启明创投", "relation": "LEAD", "object": "智谱AI"}]}
+{"text": "高瓴资本领投蔚来汽车A轮", "tokens": ["高", "瓴", "资", "本", "领", "投", "蔚", "来", "汽", "车", "A", "轮"], "triple_set": [{"subject": "高瓴资本", "relation": "LEAD", "object": "蔚来汽车"}]}
+{"text": "腾讯领投蔚来汽车B轮", "tokens": ["腾", "讯", "领", "投", "蔚", "来", "汽", "车", "B", "轮"], "triple_set": [{"subject": "腾讯", "relation": "LEAD", "object": "蔚来汽车"}]}
+{"text": "淡马锡领投蔚来汽车C轮", "tokens": ["淡", "马", "锡", "领", "投", "蔚", "来", "汽", "车", "C", "轮"], "triple_set": [{"subject": "淡马锡", "relation": "LEAD", "object": "蔚来汽车"}]}
+{"text": "阿里云峰基金领投小鹏汽车B轮", "tokens": ["阿", "里", "云", "峰", "基", "金", "领", "投", "小", "鹏", "汽", "车", "B", "轮"], "triple_set": [{"subject": "阿里云峰基金", "relation": "LEAD", "object": "小鹏汽车"}]}
+{"text": "小米集团领投小鹏汽车C轮", "tokens": ["小", "米", "集", "团", "领", "投", "小", "鹏", "汽", "车", "C", "轮"], "triple_set": [{"subject": "小米集团", "relation": "LEAD", "object": "小鹏汽车"}]}
+{"text": "明势资本天使投资理想汽车", "tokens": ["明", "势", "资", "本", "天", "使", "投", "资", "理", "想", "汽", "车"], "triple_set": [{"subject": "明势资本", "relation": "LEAD", "object": "理想汽车"}]}
+{"text": "美团领投理想汽车C轮", "tokens": ["美", "团", "领", "投", "理", "想", "汽", "车", "C", "轮"], "triple_set": [{"subject": "美团", "relation": "LEAD", "object": "理想汽车"}]}
+{"text": "红杉资本领投零跑汽车A轮", "tokens": ["红", "杉", "资", "本", "领", "投", "零", "跑", "汽", "车", "A", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "零跑汽车"}]}
+{"text": "国投创业领投寒武纪B轮", "tokens": ["国", "投", "创", "业", "领", "投", "寒", "武", "纪", "B", "轮"], "triple_set": [{"subject": "国投创业", "relation": "LEAD", "object": "寒武纪"}]}
+{"text": "中科院创投天使投资寒武纪", "tokens": ["中", "科", "院", "创", "投", "天", "使", "投", "资", "寒", "武", "纪"], "triple_set": [{"subject": "中科院创投", "relation": "LEAD", "object": "寒武纪"}]}
+{"text": "高瓴资本领投壁仞科技B轮", "tokens": ["高", "瓴", "资", "本", "领", "投", "壁", "仞", "科", "技", "B", "轮"], "triple_set": [{"subject": "高瓴资本", "relation": "LEAD", "object": "壁仞科技"}]}
+{"text": "启明创投领投壁仞科技A轮", "tokens": ["启", "明", "创", "投", "领", "投", "壁", "仞", "科", "技", "A", "轮"], "triple_set": [{"subject": "启明创投", "relation": "LEAD", "object": "壁仞科技"}]}
+{"text": "五源资本领投地平线A轮", "tokens": ["五", "源", "资", "本", "领", "投", "地", "平", "线", "A", "轮"], "triple_set": [{"subject": "五源资本", "relation": "LEAD", "object": "地平线"}]}
+{"text": "英特尔跟投地平线B轮", "tokens": ["英", "特", "尔", "跟", "投", "地", "平", "线", "B", "轮"], "triple_set": [{"subject": "英特尔", "relation": "INVEST", "object": "地平线"}]}
+{"text": "SK海力士领投地平线C轮", "tokens": ["S", "K", "海", "力", "士", "领", "投", "地", "平", "线", "C", "轮"], "triple_set": [{"subject": "SK海力士", "relation": "LEAD", "object": "地平线"}]}
+{"text": "北极光创投领投黑芝麻智能A轮", "tokens": ["北", "极", "光", "创", "投", "领", "投", "黑", "芝", "麻", "智", "能", "A", "轮"], "triple_set": [{"subject": "北极光创投", "relation": "LEAD", "object": "黑芝麻智能"}]}
+{"text": "君联资本领投黑芝麻智能B轮", "tokens": ["君", "联", "资", "本", "领", "投", "黑", "芝", "麻", "智", "能", "B", "轮"], "triple_set": [{"subject": "君联资本", "relation": "LEAD", "object": "黑芝麻智能"}]}
+{"text": "社保基金战略投资蚂蚁集团", "tokens": ["社", "保", "基", "金", "战", "略", "投", "资", "蚂", "蚁", "集", "团"], "triple_set": [{"subject": "社保基金", "relation": "LEAD", "object": "蚂蚁集团"}]}
+{"text": "中投公司战略投资蚂蚁集团", "tokens": ["中", "投", "公", "司", "战", "略", "投", "资", "蚂", "蚁", "集", "团"], "triple_set": [{"subject": "中投公司", "relation": "LEAD", "object": "蚂蚁集团"}]}
+{"text": "摩根士丹利领投陆金所B轮", "tokens": ["摩", "根", "士", "丹", "利", "领", "投", "陆", "金", "所", "B", "轮"], "triple_set": [{"subject": "摩根士丹利", "relation": "LEAD", "object": "陆金所"}]}
+{"text": "红杉资本领投京东数科A轮", "tokens": ["红", "杉", "资", "本", "领", "投", "京", "东", "数", "科", "A", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "京东数科"}]}
+{"text": "腾讯发起设立微众银行", "tokens": ["腾", "讯", "发", "起", "设", "立", "微", "众", "银", "行"], "triple_set": [{"subject": "腾讯", "relation": "LEAD", "object": "微众银行"}]}
+{"text": "红杉资本领投美团A轮", "tokens": ["红", "杉", "资", "本", "领", "投", "美", "团", "A", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "美团"}]}
+{"text": "阿里巴巴领投美团B轮", "tokens": ["阿", "里", "巴", "巴", "领", "投", "美", "团", "B", "轮"], "triple_set": [{"subject": "阿里巴巴", "relation": "LEAD", "object": "美团"}]}
+{"text": "泛大西洋资本领投美团D轮", "tokens": ["泛", "大", "西", "洋", "资", "本", "领", "投", "美", "团", "D", "轮"], "triple_set": [{"subject": "泛大西洋资本", "relation": "LEAD", "object": "美团"}]}
+{"text": "金沙江创投领投饿了么A轮", "tokens": ["金", "沙", "江", "创", "投", "领", "投", "饿", "了", "么", "A", "轮"], "triple_set": [{"subject": "金沙江创投", "relation": "LEAD", "object": "饿了么"}]}
+{"text": "红杉资本领投饿了么C轮", "tokens": ["红", "杉", "资", "本", "领", "投", "饿", "了", "么", "C", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "饿了么"}]}
+{"text": "阿里巴巴领投饿了么F轮", "tokens": ["阿", "里", "巴", "巴", "领", "投", "饿", "了", "么", "F", "轮"], "triple_set": [{"subject": "阿里巴巴", "relation": "LEAD", "object": "饿了么"}]}
+{"text": "IDG资本领投喜茶A轮", "tokens": ["I", "D", "G", "资", "本", "领", "投", "喜", "茶", "A", "轮"], "triple_set": [{"subject": "IDG资本", "relation": "LEAD", "object": "喜茶"}]}
+{"text": "美团龙珠领投喜茶B轮", "tokens": ["美", "团", "龙", "珠", "领", "投", "喜", "茶", "B", "轮"], "triple_set": [{"subject": "美团龙珠", "relation": "LEAD", "object": "喜茶"}]}
+{"text": "红杉资本投资大疆创新B轮", "tokens": ["红", "杉", "资", "本", "投", "资", "大", "疆", "创", "新", "B", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "大疆创新"}]}
+{"text": "Accel投资大疆创新A轮", "tokens": ["A", "c", "c", "e", "l", "投", "资", "大", "疆", "创", "新", "A", "轮"], "triple_set": [{"subject": "Accel Partners", "relation": "LEAD", "object": "大疆创新"}]}
+{"text": "成为资本领投极飞科技B轮", "tokens": ["成", "为", "资", "本", "领", "投", "极", "飞", "科", "技", "B", "轮"], "triple_set": [{"subject": "成为资本", "relation": "LEAD", "object": "极飞科技"}]}
+{"text": "IDG资本领投峰飞航空A轮", "tokens": ["I", "D", "G", "资", "本", "领", "投", "峰", "飞", "航", "空", "A", "轮"], "triple_set": [{"subject": "IDG资本", "relation": "LEAD", "object": "峰飞航空"}]}
+{"text": "GGV领投亿航智能A轮", "tokens": ["G", "G", "V", "领", "投", "亿", "航", "智", "能", "A", "轮"], "triple_set": [{"subject": "GGV纪源资本", "relation": "LEAD", "object": "亿航智能"}]}
+{"text": "华创资本领投明略科技A轮", "tokens": ["华", "创", "资", "本", "领", "投", "明", "略", "科", "技", "A", "轮"], "triple_set": [{"subject": "华创资本", "relation": "LEAD", "object": "明略科技"}]}
+{"text": "腾讯领投明略科技C轮", "tokens": ["腾", "讯", "领", "投", "明", "略", "科", "技", "C", "轮"], "triple_set": [{"subject": "腾讯", "relation": "LEAD", "object": "明略科技"}]}
+{"text": "红杉资本领投神策数据B轮", "tokens": ["红", "杉", "资", "本", "领", "投", "神", "策", "数", "据", "B", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "神策数据"}]}
+{"text": "华平投资领投神策数据C轮", "tokens": ["华", "平", "投", "资", "领", "投", "神", "策", "数", "据", "C", "轮"], "triple_set": [{"subject": "华平投资", "relation": "LEAD", "object": "神策数据"}]}
+{"text": "华创资本领投PingCAP A轮", "tokens": ["华", "创", "资", "本", "领", "投", "P", "i", "n", "g", "C", "A", "P", " ", "A", "轮"], "triple_set": [{"subject": "华创资本", "relation": "LEAD", "object": "PingCAP"}]}
+{"text": "复星锐正领投PingCAP B轮", "tokens": ["复", "星", "锐", "正", "领", "投", "P", "i", "n", "g", "C", "A", "P", " ", "B", "轮"], "triple_set": [{"subject": "复星锐正", "relation": "LEAD", "object": "PingCAP"}]}
+{"text": "红杉资本领投京东物流A轮", "tokens": ["红", "杉", "资", "本", "领", "投", "京", "东", "物", "流", "A", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "京东物流"}]}
+{"text": "腾讯领投满帮B轮", "tokens": ["腾", "讯", "领", "投", "满", "帮", "B", "轮"], "triple_set": [{"subject": "腾讯", "relation": "LEAD", "object": "满帮集团"}]}
+{"text": "软银愿景基金领投满帮E轮", "tokens": ["软", "银", "愿", "景", "基", "金", "领", "投", "满", "帮", "E", "轮"], "triple_set": [{"subject": "软银愿景基金", "relation": "LEAD", "object": "满帮集团"}]}
+{"text": "红杉资本领投货拉拉B轮", "tokens": ["红", "杉", "资", "本", "领", "投", "货", "拉", "拉", "B", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "货拉拉"}]}
+{"text": "高瓴资本领投货拉拉E轮", "tokens": ["高", "瓴", "资", "本", "领", "投", "货", "拉", "拉", "E", "轮"], "triple_set": [{"subject": "高瓴资本", "relation": "LEAD", "object": "货拉拉"}]}
+{"text": "IDG资本领投B站A轮", "tokens": ["I", "D", "G", "资", "本", "领", "投", "B", "站", "A", "轮"], "triple_set": [{"subject": "IDG资本", "relation": "LEAD", "object": "B站"}]}
+{"text": "腾讯领投B站D轮", "tokens": ["腾", "讯", "领", "投", "B", "站", "D", "轮"], "triple_set": [{"subject": "腾讯", "relation": "LEAD", "object": "B站"}]}
+{"text": "斯凯网络天使投资米哈游", "tokens": ["斯", "凯", "网", "络", "天", "使", "投", "资", "米", "哈", "游"], "triple_set": [{"subject": "斯凯网络", "relation": "LEAD", "object": "米哈游"}]}
+{"text": "红杉资本领投莉莉丝A轮", "tokens": ["红", "杉", "资", "本", "领", "投", "莉", "莉", "丝", "A", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "莉莉丝游戏"}]}
+{"text": "高瓴资本战略投资药明康德", "tokens": ["高", "瓴", "资", "本", "战", "略", "投", "资", "药", "明", "康", "德"], "triple_set": [{"subject": "高瓴资本", "relation": "LEAD", "object": "药明康德"}]}
+{"text": "高瓴资本战略投资百济神州", "tokens": ["高", "瓴", "资", "本", "战", "略", "投", "资", "百", "济", "神", "州"], "triple_set": [{"subject": "高瓴资本", "relation": "LEAD", "object": "百济神州"}]}
+{"text": "腾讯领投微医B轮", "tokens": ["腾", "讯", "领", "投", "微", "医", "B", "轮"], "triple_set": [{"subject": "腾讯", "relation": "LEAD", "object": "微医"}]}
+{"text": "友邦保险领投微医C轮", "tokens": ["友", "邦", "保", "险", "领", "投", "微", "医", "C", "轮"], "triple_set": [{"subject": "友邦保险", "relation": "LEAD", "object": "微医"}]}
+{"text": "IDG资本领投平安好医生A轮", "tokens": ["I", "D", "G", "资", "本", "领", "投", "平", "安", "好", "医", "生", "A", "轮"], "triple_set": [{"subject": "IDG资本", "relation": "LEAD", "object": "平安好医生"}]}

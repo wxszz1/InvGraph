@@ -1,0 +1,8 @@
+{"text": "IDG资本领投峰飞航空A轮", "tokens": ["I", "D", "G", "资", "本", "领", "投", "峰", "飞", "航", "空", "A", "轮"], "triple_set": [{"subject": "IDG资本", "relation": "LEAD", "object": "峰飞航空"}]}
+{"text": "红杉资本领投月之暗面A轮", "tokens": ["红", "杉", "资", "本", "领", "投", "月", "之", "暗", "面", "A", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "月之暗面"}]}
+{"text": "高瓴资本领投依图科技C轮", "tokens": ["高", "瓴", "资", "本", "领", "投", "依", "图", "科", "技", "C", "轮"], "triple_set": [{"subject": "高瓴资本", "relation": "LEAD", "object": "依图科技"}]}
+{"text": "高瓴资本领投货拉拉E轮", "tokens": ["高", "瓴", "资", "本", "领", "投", "货", "拉", "拉", "E", "轮"], "triple_set": [{"subject": "高瓴资本", "relation": "LEAD", "object": "货拉拉"}]}
+{"text": "腾讯领投微医B轮", "tokens": ["腾", "讯", "领", "投", "微", "医", "B", "轮"], "triple_set": [{"subject": "腾讯", "relation": "LEAD", "object": "微医"}]}
+{"text": "红杉资本投资快手A轮", "tokens": ["红", "杉", "资", "本", "投", "资", "快", "手", "A", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "快手"}]}
+{"text": "阿里巴巴领投美团B轮", "tokens": ["阿", "里", "巴", "巴", "领", "投", "美", "团", "B", "轮"], "triple_set": [{"subject": "阿里巴巴", "relation": "LEAD", "object": "美团"}]}
+{"text": "红杉资本领投货拉拉B轮", "tokens": ["红", "杉", "资", "本", "领", "投", "货", "拉", "拉", "B", "轮"], "triple_set": [{"subject": "红杉资本", "relation": "LEAD", "object": "货拉拉"}]}

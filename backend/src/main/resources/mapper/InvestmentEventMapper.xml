@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.srt.kg.mapper.InvestmentEventMapper">
+    <select id="findByEnterpriseId" resultType="com.srt.kg.entity.InvestmentEvent">
+        SELECT * FROM investment_event WHERE enterprise_id = #{enterpriseId} ORDER BY time DESC
+    </select>
+    <select id="findByEnterpriseIdWithNames" resultType="java.util.LinkedHashMap">
+        SELECT ev.*, inv.name as investor_name, ent.name as enterprise_name
+        FROM investment_event ev
+        JOIN investor inv ON ev.investor_id = inv.id
+        JOIN enterprise ent ON ev.enterprise_id = ent.id
+        WHERE ev.enterprise_id = #{enterpriseId}
+        ORDER BY ev.time DESC
+    </select>
+    <select id="findByInvestorId" resultType="com.srt.kg.entity.InvestmentEvent">
+        SELECT * FROM investment_event WHERE investor_id = #{investorId} ORDER BY time DESC
+    </select>
+    <select id="findAll" resultType="com.srt.kg.entity.InvestmentEvent">
+        SELECT * FROM investment_event ORDER BY time DESC LIMIT #{offset}, #{limit}
+    </select>
+    <select id="findByTimeRange" resultType="com.srt.kg.entity.InvestmentEvent">
+        SELECT * FROM investment_event WHERE time &gt;= #{startTime} AND time &lt;= #{endTime} ORDER BY time
+    </select>
+    <select id="countByIndustryAndYear" resultType="java.util.LinkedHashMap">
+        SELECT i.name as industry, SUBSTRING(e.time, 1, 4) as year, COUNT(*) as count
+        FROM investment_event e
+        JOIN enterprise ent ON e.enterprise_id = ent.id
+        JOIN industry i ON ent.industry_id = i.id
+        GROUP BY i.name, SUBSTRING(e.time, 1, 4)
+        ORDER BY i.name, year
+    </select>
+    <insert id="insert" parameterType="com.srt.kg.entity.InvestmentEvent" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO investment_event(investor_id, enterprise_id, round, amount, time, lead_flag, relation, source)
+        VALUES(#{investorId}, #{enterpriseId}, #{round}, #{amount}, #{time}, #{leadFlag}, #{relation}, #{source})
+    </insert>
+    <insert id="insertBatch" parameterType="list">
+        INSERT INTO investment_event(investor_id, enterprise_id, round, amount, time, lead_flag, relation, source) VALUES
+        <foreach collection="list" item="e" separator=",">
+            (#{e.investorId}, #{e.enterpriseId}, #{e.round}, #{e.amount}, #{e.time}, #{e.leadFlag}, #{e.relation}, #{e.source})
+        </foreach>
+    </insert>
+</mapper>

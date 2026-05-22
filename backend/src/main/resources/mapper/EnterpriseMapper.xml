@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.srt.kg.mapper.EnterpriseMapper">
+    <select id="findAll" resultType="com.srt.kg.entity.Enterprise">
+        SELECT * FROM enterprise
+        <where>
+            <if test="keyword != null and keyword != ''">
+                AND name LIKE CONCAT('%', #{keyword}, '%')
+            </if>
+        </where>
+        ORDER BY id DESC
+        LIMIT #{offset}, #{limit}
+    </select>
+    <select id="count" resultType="int">
+        SELECT COUNT(*) FROM enterprise
+        <where>
+            <if test="keyword != null and keyword != ''">
+                AND name LIKE CONCAT('%', #{keyword}, '%')
+            </if>
+        </where>
+    </select>
+    <select id="findById" resultType="com.srt.kg.entity.Enterprise">
+        SELECT * FROM enterprise WHERE id = #{id}
+    </select>
+    <insert id="insert" parameterType="com.srt.kg.entity.Enterprise" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO enterprise(name, founding_date, industry_id, valuation, status, description)
+        VALUES(#{name}, #{foundingDate}, #{industryId}, #{valuation}, #{status}, #{description})
+    </insert>
+    <insert id="insertBatch" parameterType="list">
+        INSERT INTO enterprise(name, founding_date, industry_id, valuation, status, description) VALUES
+        <foreach collection="list" item="e" separator=",">
+            (#{e.name}, #{e.foundingDate}, #{e.industryId}, #{e.valuation}, #{e.status}, #{e.description})
+        </foreach>
+    </insert>
+</mapper>
