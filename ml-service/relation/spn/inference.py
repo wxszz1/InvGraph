@@ -83,16 +83,52 @@ class SPNInference:
                     subj_dist = outputs["pred_subj"][0, q].softmax(-1)
                     obj_dist = outputs["pred_obj"][0, q].softmax(-1)
 
-                    # 取概率最高的位置作为实体边界
-                    subj_pos = subj_dist.argmax().item()
-                    obj_pos = obj_dist.argmax().item()
+                    # 解码subject span（起止位置）
+                    subj_start, subj_end = self._decode_span(subj_dist, encoding)
+                    # 解码object span
+                    obj_start, obj_end = self._decode_span(obj_dist, encoding)
 
-                    # 简化：直接用位置附近的文本作为实体
-                    triples.append({
-                        "subject": text[max(0,subj_pos-2):subj_pos+3],
-                        "relation": rel_name,
-                        "object": text[max(0,obj_pos-2):obj_pos+3],
-                        "confidence": round(max_prob.item(), 3),
-                    })
+                    # 从原始文本提取实体
+                    subj_text = text[subj_start:subj_end] if subj_start < subj_end else ""
+                    obj_text = text[obj_start:obj_end] if obj_start < obj_end else ""
+
+                    if subj_text and obj_text:
+                        triples.append({
+                            "subject": subj_text,
+                            "relation": rel_name,
+                            "object": obj_text,
+                            "confidence": round(max_prob.item(), 3),
+                        })
+
+        return triples
+
+    def _decode_span(self, dist, encoding, threshold=0.3):
+        """从位置概率分布解码实体span的起止位置"""
+        probs = dist.cpu().numpy()
+        # 找到概率 > threshold 的连续区间
+        seq_len = encoding["attention_mask"][0].sum().item()
+        high_prob_positions = [i for i in range(1, min(seq_len, len(probs))) if probs[i] > threshold]
+
+        if not high_prob_positions:
+            # fallback: 取argmax位置
+            pos = dist.argmax().item()
+            # 将token位置映射回字符位置
+            offsets = encoding.offset_mapping[0].tolist()
+            if pos < len(offsets) and offsets[pos] != (0, 0):
+                return offsets[pos][0], offsets[pos][1]
+            return 0, 0
+
+        # 取连续区间的起止
+        start_pos = high_prob_positions[0]
+        end_pos = high_prob_positions[-1] + 1
+
+        # 映射回原始文本的字符位置
+        offsets = encoding.offset_mapping[0].tolist()
+        if start_pos < len(offsets) and end_pos <= len(offsets):
+            char_start = offsets[start_pos][0]
+            char_end = offsets[end_pos - 1][1]
+            return char_start, char_end
+
+        return 0, 0
 
         return triples

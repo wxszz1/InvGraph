@@ -207,11 +207,26 @@ public class Neo4jService {
         if (!available) return emptyGraph();
         try (Session session = driver.session()) {
             String cypher = "MATCH (i:Investor)-[r:INVEST]->(e:Enterprise {name: $name}) "
-                + "RETURN i AS n, r, e AS m ORDER BY r.time ASC";
+                + "RETURN i AS n, r, e AS m ORDER BY r.start_time ASC";
             Result result = session.run(cypher, Map.of("name", enterpriseName));
             return buildGraphFromResult(result);
         } catch (Exception e) {
             log.error("Neo4j getEnterpriseHistory error", e);
+            return emptyGraph();
+        }
+    }
+
+    /** 时序范围查询：按start_time/end_time过滤关系 */
+    public Map<String, Object> filterByTemporalRange(String startTime, String endTime) {
+        if (!available) return emptyGraph();
+        try (Session session = driver.session()) {
+            String cypher = "MATCH (n)-[r]->(m) "
+                + "WHERE r.start_time >= $start AND r.start_time <= $end "
+                + "RETURN n, r, m ORDER BY r.start_time ASC LIMIT 300";
+            Result result = session.run(cypher, Map.of("start", startTime, "end", endTime));
+            return buildGraphFromResult(result);
+        } catch (Exception e) {
+            log.error("Neo4j filterByTemporalRange error", e);
             return emptyGraph();
         }
     }

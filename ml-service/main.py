@@ -1,4 +1,4 @@
-"""ML服务 FastAPI 入口 — 整合所有Phase 2组件"""
+"""ML服务 FastAPI 入口 — 整合所有组件（规则引擎 + SPN/PL-Marker + FTRLIM + MTTR）"""
 import sys
 import os
 import threading
@@ -19,7 +19,7 @@ from relation.extractor import RelationExtractor
 from temporal.extractor import TemporalQuadrupleExtractor
 from temporal.mttr.reasoner import TemporalReasoner
 
-app = FastAPI(title="投融资NLP服务 v2")
+app = FastAPI(title="投融资NLP服务 v3")
 
 app.add_middleware(
     CORSMiddleware,
@@ -33,6 +33,35 @@ recognizer = NerRecognizer()
 extractor = RelationExtractor()
 temporal_ext = TemporalQuadrupleExtractor()
 reasoner = TemporalReasoner()
+
+# Stacking融合组件（模型checkpoint可选）
+spn_ckpt = os.path.join(BASE_DIR, "checkpoints", "spn", "best_model.pt")
+plm_ckpt = os.path.join(BASE_DIR, "checkpoints", "pl_marker", "best_model.pt")
+stacker = None
+try:
+    from relation.fusion.stacker import StackingFusion
+    stacker = StackingFusion(
+        spn_ckpt=spn_ckpt if os.path.exists(spn_ckpt) else None,
+        plm_ckpt=plm_ckpt if os.path.exists(plm_ckpt) else None,
+    )
+    if stacker.available:
+        print("[main] StackingFusion loaded with model checkpoints")
+    else:
+        print("[main] StackingFusion initialized (rule-based fallback mode)")
+except Exception as e:
+    print(f"[main] StackingFusion init failed: {e}")
+
+# FTRLIM实体对齐组件
+aligner = None
+try:
+    from entity_link.aligner import EntityAligner
+    aligner = EntityAligner()
+    aligner_path = os.path.join(BASE_DIR, "checkpoints", "ftrim", "aligner.pkl")
+    if os.path.exists(aligner_path):
+        aligner.load_model(aligner_path)
+    print("[main] EntityAligner (FTRLIM) loaded")
+except Exception as e:
+    print(f"[main] EntityAligner init failed: {e}")
 
 # 模型训练状态
 train_state = {
@@ -64,25 +93,45 @@ def relation(request: RelationRequest):
 
 @app.post("/api/extract", response_model=ExtractResponse)
 def extract(request: ExtractRequest):
-    """完整管线：NER → 关系抽取 → 时序四元组 → MTTR推理"""
+    """完整管线：NER → 关系抽取(Stacking融合) → 时序四元组 → MTTR推理"""
     # 1. NER
     raw_entities = recognizer.recognize(request.text)
     entities = [Entity(**e) for e in raw_entities]
 
-    # 2. 关系抽取（规则）
-    raw_relations = extractor.extract(request.text, raw_entities)
+    # 2. 关系抽取（规则引擎）
+    rule_relations = extractor.extract(request.text, raw_entities)
 
-    # 3. 时序四元组生成
+    # 3. Stacking融合（SPN + PL-Marker，如有模型则融合，否则用规则结果）
+    if stacker and stacker.available:
+        fused = stacker.predict(request.text)
+        # 合并：取规则结果和模型结果的并集
+        seen = set()
+        raw_relations = []
+        for r in rule_relations + fused:
+            key = f"{r.get('head', r.get('subject', ''))}|{r['relation']}|{r.get('tail', r.get('object', ''))}"
+            if key not in seen:
+                seen.add(key)
+                raw_relations.append({
+                    "head": r.get("head", r.get("subject", "")),
+                    "relation": r["relation"],
+                    "tail": r.get("tail", r.get("object", "")),
+                })
+    else:
+        raw_relations = rule_relations
+
+    # 4. 时序四元组生成
     quad_result = temporal_ext.extract_from_text(
         request.text,
         spn_triples=raw_relations,
         plm_triples=None,
     )
 
-    # 4. MTTR时序推理
+    # 5. MTTR时序推理
     temporal_rels = reasoner.reason(quad_result["quadruples"])
 
-    # 5. 构建输出
+    # 6. FTRLIM实体对齐（在数据导入时使用，提取阶段保留原始实体）
+
+    # 7. 构建输出
     triples = []
     for q in quad_result["quadruples"]:
         head_type = next((e["type"] for e in raw_entities if e["name"] == q["head"]), None)
@@ -197,3 +246,21 @@ def temporal_analyze(text: str):
             "times": quad_result["times"],
         }
     }
+
+
+@app.post("/api/align")
+def entity_align(request: dict):
+    """FTRLIM实体对齐：对多源实体进行去重对齐"""
+    if not aligner:
+        return {"code": 500, "msg": "EntityAligner not available", "data": None}
+    try:
+        entities = request.get("entities", [])
+        merge_groups = aligner.align(entities)
+        # 将合并组转为每组保留第一个实体的去重列表
+        aligned = []
+        for group in merge_groups:
+            if group:
+                aligned.append(entities[group[0]])
+        return {"code": 200, "msg": "success", "data": {"entities": aligned, "groups": merge_groups}}
+    except Exception as e:
+        return {"code": 500, "msg": f"Alignment failed: {e}", "data": None}

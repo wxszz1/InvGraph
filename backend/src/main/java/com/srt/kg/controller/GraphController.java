@@ -117,4 +117,15 @@ public class GraphController {
         result.put("data", neo4jService.getRiskPath(source, depth));
         return result;
     }
+
+    @GetMapping("/graph/timeline")
+    public Map<String, Object> timeline(
+            @RequestParam String startTime,
+            @RequestParam String endTime) {
+        Map<String, Object> result = new HashMap<>();
+        result.put("code", 200);
+        result.put("msg", "success");
+        result.put("data", neo4jService.filterByTemporalRange(startTime, endTime));
+        return result;
+    }
 }
