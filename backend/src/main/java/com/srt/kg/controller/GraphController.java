@@ -118,6 +118,17 @@ public class GraphController {
         return result;
     }
 
+    @GetMapping("/analytics/industry/{name}/events")
+    public Map<String, Object> industryEvents(
+            @PathVariable String name,
+            @RequestParam(required = false) String year) {
+        Map<String, Object> result = new HashMap<>();
+        result.put("code", 200);
+        result.put("msg", "success");
+        result.put("data", neo4jService.getIndustryEvents(name, year));
+        return result;
+    }
+
     @GetMapping("/graph/timeline")
     public Map<String, Object> timeline(
             @RequestParam String startTime,

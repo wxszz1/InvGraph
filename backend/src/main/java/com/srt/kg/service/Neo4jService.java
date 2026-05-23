@@ -231,6 +231,39 @@ public class Neo4jService {
         }
     }
 
+    /** 某行业某年的投资事件列表 */
+    public List<Map<String, Object>> getIndustryEvents(String industryName, String year) {
+        if (!available) return new ArrayList<>();
+        try (Session session = driver.session()) {
+            StringBuilder cypher = new StringBuilder(
+                "MATCH (i:Investor)-[r:INVEST]->(e:Enterprise)-[:BELONGS_TO]->(ind:Industry {name: $name}) "
+            );
+            Map<String, Object> params = new HashMap<>();
+            params.put("name", industryName);
+            if (year != null && !year.isEmpty()) {
+                cypher.append("WHERE r.time STARTS WITH $year ");
+                params.put("year", year);
+            }
+            cypher.append("RETURN e.name as name, r.round as round, r.amount as amount, r.time as time "
+                + "ORDER BY r.time DESC LIMIT 50");
+            Result result = session.run(cypher.toString(), params);
+            List<Map<String, Object>> list = new ArrayList<>();
+            while (result.hasNext()) {
+                org.neo4j.driver.Record rec = result.next();
+                Map<String, Object> item = new HashMap<>();
+                item.put("name", rec.get("name").asString());
+                item.put("round", rec.get("round").isNull() ? "" : rec.get("round").asString());
+                item.put("amount", rec.get("amount").isNull() ? "" : rec.get("amount").asString());
+                item.put("time", rec.get("time").isNull() ? "" : rec.get("time").asString());
+                list.add(item);
+            }
+            return list;
+        } catch (Exception e) {
+            log.error("Neo4j getIndustryEvents error", e);
+            return new ArrayList<>();
+        }
+    }
+
     /** 风险传导路径查询 */
     public Map<String, Object> getRiskPath(String sourceName, int depth) {
         if (!available) return emptyGraph();

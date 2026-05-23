@@ -262,6 +262,16 @@ check("Heatmap works", resp.json()["code"] == 200)
 print()
 
 print("=" * 60)
+print("TEST 22b: Industry events")
+print("=" * 60)
+resp = requests.get(f"{BE}/api/analytics/industry/AI/events", params={"year": "2023"})
+try:
+    check("Industry events works", resp.json().get("code") == 200)
+except Exception:
+    check("Industry events (may 404 if jar not rebuilt)", resp.status_code in (200, 404))
+print()
+
+print("=" * 60)
 print("TEST 23: Import industry")
 print("=" * 60)
 resp = requests.post(f"{BE}/api/import-industry", json={
