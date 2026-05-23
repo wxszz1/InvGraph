@@ -55,8 +55,15 @@ class NerRecognizer:
                 entities.append({"name": name, "type": "Enterprise"})
 
         # 3. 已知投资机构（长名称优先）
+        VERB_PARTICLES = ('了', '过', '着')
         for name in sorted(KNOWN_INVESTORS, key=len, reverse=True):
             if name in text and ("investor", name) not in seen:
+                # 如果投资机构名以关系关键词结尾，且后面紧跟"了/过/着"，说明是动词用法，跳过
+                # 如"腾讯投资了美团"中的"腾讯投资"是"腾讯"+动词"投资了"，不是机构名
+                if any(name.endswith(kw) for kw in INVEST_KEYWORDS):
+                    name_end = text.find(name) + len(name)
+                    if name_end < len(text) and text[name_end] in VERB_PARTICLES:
+                        continue
                 seen.add(("investor", name))
                 entities.append({"name": name, "type": "Investor"})
 
@@ -244,11 +251,16 @@ class NerRecognizer:
         if self.hanlp_ner is None:
             return []
         try:
+            from ner.keywords import INVEST_KEYWORDS, ACQUIRE_KEYWORDS, LEAD_KEYWORDS, FOLLOW_KEYWORDS
+            REL_KEYWORDS_HANLP = set(INVEST_KEYWORDS + ACQUIRE_KEYWORDS + LEAD_KEYWORDS + FOLLOW_KEYWORDS)
             result = self.hanlp_ner(text)
             entities = []
             for item in result:
                 if len(item) >= 2:
                     name, label = item[0], item[1]
+                    # 跳过包含关系关键词的实体（如"腾讯投资了"）
+                    if any(kw in name for kw in REL_KEYWORDS_HANLP if kw != name):
+                        continue
                     entity_type = self._map_hanlp_label(label, name)
                     if entity_type:
                         entities.append({"name": name, "type": entity_type})
