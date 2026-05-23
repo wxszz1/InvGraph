@@ -12,6 +12,12 @@ from ner.keywords import (
     INVEST_KEYWORDS, ACQUIRE_KEYWORDS, LEAD_KEYWORDS, FOLLOW_KEYWORDS
 )
 
+# 英文关系关键词
+EN_INVEST_KEYWORDS = ["invested in", "invests in", "investment in", "funding for", "raised"]
+EN_ACQUIRE_KEYWORDS = ["acquired", "acquires", "acquisition of", "purchased"]
+EN_LEAD_KEYWORDS = ["led by", "led the", "leading the", "spearheaded"]
+EN_FOLLOW_KEYWORDS = ["participated in", "participating", "joined in", "co-invested", "alongside", "joining"]
+
 # 句子/分句分隔符
 CLAUSE_SEPS = re.compile(r'[，。；、！？\n,;!?]')
 
@@ -130,6 +136,61 @@ class RelationExtractor:
                             if key not in seen:
                                 seen.add(key)
                                 relations.append({"head": inv_after, "relation": "INVEST", "tail": ent_before})
+
+        # 3. English keywords（英文关系关键词匹配）
+        text_lower = text.lower()
+        for keywords, rel_type in [
+            (EN_LEAD_KEYWORDS, "LEAD"),
+            (EN_FOLLOW_KEYWORDS, "FOLLOW"),
+            (EN_INVEST_KEYWORDS, "INVEST"),
+            (EN_ACQUIRE_KEYWORDS, "ACQUIRE"),
+        ]:
+            for kw in keywords:
+                if kw.lower() not in text_lower:
+                    continue
+                for clause, clause_start in clauses:
+                    if kw.lower() not in clause.lower():
+                        continue
+                    for kw_match in re.finditer(re.escape(kw), clause, re.IGNORECASE):
+                        kw_pos = kw_match.start() + clause_start
+                        if rel_type == "ACQUIRE":
+                            head = self._find_nearest_before(text, kw_pos, enterprises, _get_name)
+                            tail = self._find_nearest_after(text, kw_pos, enterprises, _get_name)
+                            if not head:
+                                head = self._find_nearest_global(text, kw_pos, enterprises, _get_name)
+                            if not tail:
+                                tail = self._find_nearest_global(text, kw_pos, enterprises, _get_name)
+                            if head and tail and head != tail:
+                                key = f"{head}|{rel_type}|{tail}"
+                                if key not in seen:
+                                    seen.add(key)
+                                    relations.append({"head": head, "relation": rel_type, "tail": tail})
+                        elif rel_type in ("LEAD", "INVEST"):
+                            head = self._find_nearest_before(text, kw_pos, investors, _get_name)
+                            tail = self._find_nearest_after(text, kw_pos, enterprises, _get_name)
+                            if not head:
+                                head = self._find_nearest_global(text, kw_pos, investors, _get_name)
+                            if not tail:
+                                tail = self._find_nearest_global(text, kw_pos, enterprises, _get_name)
+                            if head and tail and head != tail:
+                                key = f"{head}|{rel_type}|{tail}"
+                                if key not in seen:
+                                    seen.add(key)
+                                    relations.append({"head": head, "relation": rel_type, "tail": tail})
+                        else:  # FOLLOW - find ALL investors before keyword (excluding LEAD investors)
+                            lead_ents = [r["tail"] for r in relations if r["relation"] == "LEAD"]
+                            lead_investors = set(r["head"] for r in relations if r["relation"] == "LEAD")
+                            tail = lead_ents[-1] if lead_ents else self._find_nearest_global(text, kw_pos, enterprises, _get_name)
+                            for inv in investors:
+                                inv_name = _get_name(inv)
+                                if inv_name in lead_investors:
+                                    continue  # Skip investors already used for LEAD
+                                if text.rfind(inv_name, 0, kw_pos) >= 0:
+                                    if tail and inv_name != tail:
+                                        key = f"{inv_name}|{rel_type}|{tail}"
+                                        if key not in seen:
+                                            seen.add(key)
+                                            relations.append({"head": inv_name, "relation": rel_type, "tail": tail})
 
         return relations
 

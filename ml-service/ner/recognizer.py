@@ -89,10 +89,18 @@ class NerRecognizer:
         FUNC_PREFIXES = ('由', '被', '将', '让', '给', '为', '对', '从', '向', '到', '在')
         # 关系关键词（不应出现在实体名中）
         REL_KEYWORDS = set(INVEST_KEYWORDS + ACQUIRE_KEYWORDS + LEAD_KEYWORDS + FOLLOW_KEYWORDS)
+        # 时间前缀模式（不应出现在实体名开头）
+        TIME_PREFIX_RE = re.compile(r'^\d{4}年\d{1,2}月?')
 
         inv_pattern = '|'.join(re.escape(s) for s in INVESTOR_SUFFIXES)
         for match in re.finditer(rf'[一-鿿A-Za-z0-9]{{2,10}}(?:{inv_pattern})', text):
             raw_name = match.group()
+            # 跳过以时间开头的（如"2023年3月高瓴资本"）
+            time_match = TIME_PREFIX_RE.match(raw_name)
+            if time_match:
+                raw_name = raw_name[time_match.end():]
+                if len(raw_name) < 2:
+                    continue
             # 跳过以功能词开头的（如"由红杉资本"）
             if raw_name[0] in FUNC_PREFIXES:
                 # 尝试去掉前缀后重新检查
@@ -168,6 +176,18 @@ class NerRecognizer:
             'Series', 'Round', 'Funding', 'Valued', 'Billion', 'Million',
             'Raising', 'Raised', 'Announced', 'Completed',
             'GPU', 'CPU', 'API', 'SDK', 'IoT',
+            # 人名（常见英文名）
+            'Brett', 'Adcock', 'Sam', 'Altman', 'Elon', 'Musk',
+            'Tim', 'Cook', 'Satya', 'Nadella', 'Sundar', 'Pichai',
+            'Mark', 'Zuckerberg', 'Jeff', 'Bezos', 'Andy', 'Jassy',
+            'Jensen', 'Huang', 'Lisa', 'Su', 'Pat', 'Gelsinger',
+            # 金额/轮次词
+            'USD', 'Dollar', 'Dollars', 'Yuan', 'Euro',
+            'Pre', 'Post', 'Seed', 'Angel', 'Series',
+            # 其他常见词
+            'Inc', 'Corp', 'Ltd', 'LLC', 'Co',
+            'New', 'Old', 'Big', 'Small', 'Top', 'First', 'Second',
+            'Led', 'By', 'In', 'On', 'At', 'To', 'Of',
         }
         for match in re.finditer(r'\b([A-Z][a-zA-Z]{1,15})\b', text):
             name = match.group()
