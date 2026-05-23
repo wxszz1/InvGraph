@@ -1,8 +1,8 @@
 -- 融合时序特征的投融资风险知识图谱 — MySQL建表脚本
 -- 三级模式：Industry → Enterprise → Investor
 
-CREATE DATABASE IF NOT EXISTS srt_kg DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE srt_kg;
+CREATE DATABASE IF NOT EXISTS srt_kg_invgraph DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE srt_kg_invgraph;
 
 -- 行业分类表
 CREATE TABLE IF NOT EXISTS industry (
