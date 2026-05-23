@@ -24,3 +24,5 @@ backend/target/
 
 # Temp files
 temp_*.json
+ml-service/models/
+ml-service/models/

@@ -29,6 +29,14 @@ class PLMarkerInference:
             device if torch.cuda.is_available() else "cpu"
         )
 
+        # Tokenizer（必须先加载，因为需要resize embeddings）
+        self.tokenizer = AutoTokenizer.from_pretrained(
+            TRAIN_CONFIG["model_name"]
+        )
+        self.tokenizer.add_special_tokens(
+            {"additional_special_tokens": MARKER_TOKENS}
+        )
+
         if model_path and os.path.exists(model_path):
             checkpoint = torch.load(model_path, map_location=self.device)
             model_config = checkpoint.get("config", {
@@ -38,6 +46,7 @@ class PLMarkerInference:
                 "dropout": 0.1,
             })
             self.model = PLMarkerModel(model_config)
+            self.model.bert.resize_token_embeddings(len(self.tokenizer))
             self.model.load_state_dict(checkpoint["model_state_dict"])
             self.model.to(self.device)
             self.model.eval()
@@ -45,14 +54,6 @@ class PLMarkerInference:
         else:
             self.model = None
             self.has_model = False
-
-        # Tokenizer
-        self.tokenizer = AutoTokenizer.from_pretrained(
-            TRAIN_CONFIG["model_name"]
-        )
-        self.tokenizer.add_special_tokens(
-            {"additional_special_tokens": MARKER_TOKENS}
-        )
 
     def predict(self, text: str, entities: list) -> list:
         """

@@ -82,9 +82,9 @@ def train(train_data_path: str, val_data_path: str = None, save_dir: str = None)
                         gt,
                     )
                     loss_i, _ = criterion(
-                        outputs["pred_scores"][i:i+1],
-                        outputs["pred_subj"][i:i+1],
-                        outputs["pred_obj"][i:i+1],
+                        outputs["pred_scores"][i],
+                        outputs["pred_subj"][i],
+                        outputs["pred_obj"][i],
                         gt, matches,
                     )
                     batch_loss = batch_loss + loss_i

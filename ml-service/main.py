@@ -35,8 +35,8 @@ temporal_ext = TemporalQuadrupleExtractor()
 reasoner = TemporalReasoner()
 
 # Stacking融合组件（模型checkpoint可选）
-spn_ckpt = os.path.join(BASE_DIR, "checkpoints", "spn", "best_model.pt")
-plm_ckpt = os.path.join(BASE_DIR, "checkpoints", "pl_marker", "best_model.pt")
+spn_ckpt = os.path.join(BASE_DIR, "models", "spn", "best_model.bin")
+plm_ckpt = os.path.join(BASE_DIR, "models", "pl_marker", "best_model.bin")
 stacker = None
 try:
     from relation.fusion.stacker import StackingFusion

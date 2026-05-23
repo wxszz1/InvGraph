@@ -36,7 +36,9 @@ def train(train_data_path: str, val_data_path: str = None, save_dir: str = None)
     print(f"训练设备: {device}")
     if device.type == "cuda":
         print(f"GPU: {torch.cuda.get_device_name(0)}")
-        print(f"显存: {torch.cuda.get_device_properties(0).total_mem / 1024**3:.1f} GB")
+        total = getattr(torch.cuda.get_device_properties(0), 'total_memory', None)
+        if total:
+            print(f"显存: {total / 1024**3:.1f} GB")
 
     # 初始化模型
     model_config = {
@@ -46,11 +48,19 @@ def train(train_data_path: str, val_data_path: str = None, save_dir: str = None)
         "dropout": 0.1,
     }
     model = PLMarkerModel(model_config)
-    model.to(device)
 
-    # 数据加载
+    # 数据加载（先加载数据，因为data_loader会添加特殊token到tokenizer）
     print(f"加载训练数据: {train_data_path}")
     train_loader = get_dataloader(train_data_path, config["batch_size"], shuffle=True)
+
+    # resize BERT embeddings以包含[E1]/[/E1]/[E2]/[/E2]等特殊token
+    new_vocab_size = len(train_loader.dataset.tokenizer)
+    if new_vocab_size != model.bert.config.vocab_size:
+        model.bert.resize_token_embeddings(new_vocab_size)
+        print(f"Embeddings resized: {model.bert.config.vocab_size} -> {new_vocab_size}")
+
+    model.to(device)
+
     val_loader = None
     if val_data_path and os.path.exists(val_data_path):
         val_loader = get_dataloader(val_data_path, config["batch_size"], shuffle=False)
