@@ -69,7 +69,7 @@ class ExtractResponse(BaseModel):
 
 
 class TrainRequest(BaseModel):
-    model: str  # pl_marker / spn / all
+    model: str  # pl_marker / spn / ftrlim / mttr / preprocess
     epochs: int = 30
     batch_size: int = 16
     learning_rate: float = 2e-5

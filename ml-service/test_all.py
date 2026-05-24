@@ -299,5 +299,61 @@ check("C+轮 recognized", "C+轮" in names)
 print()
 
 print("=" * 60)
+print("TEST 26: NER - Full company name with suffix")
+print("=" * 60)
+resp = requests.post(f"{ML}/api/ner", json={"text": "上海钧合原子科技有限公司近日完成数亿元天使轮融资"})
+data = resp.json()
+names = [e["name"] for e in data["entities"]]
+check("Full company name", "上海钧合原子科技有限公司" in names)
+check("Angel round", "天使轮" in names)
+print()
+
+print("=" * 60)
+print("TEST 27: NER - Chinese number amounts")
+print("=" * 60)
+resp = requests.post(f"{ML}/api/ner", json={"text": "该公司完成数亿元融资"})
+data = resp.json()
+moneys = [m["text"] for m in data["moneys"]]
+check("数亿 extracted", any("数亿" in m for m in moneys))
+print()
+
+print("=" * 60)
+print("TEST 28: NER - Nuclear energy industry")
+print("=" * 60)
+resp = requests.post(f"{ML}/api/ner", json={"text": "专注小型模块化反应堆及微型反应堆研发"})
+data = resp.json()
+names = [e["name"] for e in data["entities"]]
+etypes = {e["name"]: e["type"] for e in data["entities"]}
+check("SMR recognized", "小型模块化反应堆" in names)
+check("Micro reactor recognized", "微型反应堆" in names)
+check("SMR is Industry", etypes.get("小型模块化反应堆") == "Industry")
+print()
+
+print("=" * 60)
+print("TEST 29: FTRLIM - Entity alignment")
+print("=" * 60)
+resp = requests.post(f"{ML}/api/align", json={
+    "entities": [
+        {"name": "红杉资本", "type": "Investor"},
+        {"name": "红杉", "type": "Investor"},
+        {"name": "字节跳动", "type": "Enterprise"},
+        {"name": "ByteDance", "type": "Enterprise"},
+    ]
+})
+data = resp.json()
+check("Align endpoint works", data["code"] == 200)
+check("Groups formed", len(data["data"]["groups"]) > 0)
+print()
+
+print("=" * 60)
+print("TEST 30: Model status - all models")
+print("=" * 60)
+resp = requests.get(f"{ML}/api/model/status")
+data = resp.json()
+check("Status endpoint works", "status" in data)
+check("Status is idle or training", data["status"] in ("idle", "training"))
+print()
+
+print("=" * 60)
 print(f"RESULTS: {tests_passed} passed, {tests_failed} failed, {tests_passed + tests_failed} total")
 print("=" * 60)

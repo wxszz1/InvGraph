@@ -24,5 +24,10 @@ backend/target/
 
 # Temp files
 temp_*.json
+test_ner_*.py
+test_ner_*.txt
+backend/backend.log
+
+# Model checkpoints (large binary files)
 ml-service/models/
-ml-service/models/
+ml-service/checkpoints/

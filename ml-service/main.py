@@ -56,12 +56,36 @@ aligner = None
 try:
     from entity_link.aligner import EntityAligner
     aligner = EntityAligner()
-    aligner_path = os.path.join(BASE_DIR, "checkpoints", "ftrim", "aligner.pkl")
+    aligner_path = os.path.join(BASE_DIR, "checkpoints", "ftrlim", "aligner.json")
     if os.path.exists(aligner_path):
         aligner.load_model(aligner_path)
     print("[main] EntityAligner (FTRLIM) loaded")
 except Exception as e:
     print(f"[main] EntityAligner init failed: {e}")
+
+# MTTR神经时序推理模型
+mttr_model = None
+mttr_tokenizer = None
+mttr_ckpt = os.path.join(BASE_DIR, "models", "mttr", "best_model.bin")
+try:
+    if os.path.exists(mttr_ckpt):
+        import torch
+        from temporal.mttr.model import MTTRModel
+        from transformers import AutoTokenizer
+        ckpt = torch.load(mttr_ckpt, map_location="cpu", weights_only=False)
+        mttr_config = ckpt["config"]
+        mttr_model = MTTRModel(mttr_config)
+        mttr_model.load_state_dict(ckpt["model_state_dict"])
+        mttr_model.eval()
+        mttr_tokenizer = AutoTokenizer.from_pretrained(mttr_config["model_name"])
+        print("[main] MTTR neural model loaded")
+    else:
+        print("[main] MTTR checkpoint not found, using rule-based reasoner only")
+except Exception as e:
+    print(f"[main] MTTR load failed: {e}")
+
+RELATION_LIST = ["INVEST", "LEAD", "FOLLOW", "ACQUIRE", "BELONGS_TO", "COMPETE", "CO_INVEST"]
+TEMPORAL_LIST = ["before", "after", "overlap", "simultaneous"]
 
 # 模型训练状态
 train_state = {
@@ -210,6 +234,34 @@ def train(request: TrainRequest):
                 train_state = {**train_state, "status": "done", "progress": 100,
                                "message": "数据预处理完成"}
 
+            elif model_name == "ftrlim":
+                data_path = os.path.join(BASE_DIR, "data", "ftrlim_training_data.json")
+                model_dir = os.path.join(BASE_DIR, "checkpoints", "ftrlim")
+                model_path = os.path.join(model_dir, "aligner.json")
+                if not os.path.exists(data_path):
+                    train_state = {**train_state, "status": "error",
+                                   "message": "FTRLIM训练数据不存在，请先运行 data/gen_ftrlim_data.py"}
+                    return
+                import json as _json
+                with open(data_path, 'r', encoding='utf-8') as f:
+                    fdata = _json.load(f)
+                pairs = [(p["a"], p["b"]) for p in fdata["pairs"]]
+                labels = fdata["labels"]
+                train_state["progress"] = 10
+                aligner.train(pairs, labels, epochs=10)
+                os.makedirs(model_dir, exist_ok=True)
+                aligner.save_model(model_path)
+                train_state = {**train_state, "status": "done", "progress": 100,
+                               "message": f"FTRLIM训练完成，保存到 {model_path}"}
+
+            elif model_name == "mttr":
+                from temporal.mttr.train import train as train_mttr
+                model_dir = os.path.join(BASE_DIR, "models", "mttr")
+                train_state["progress"] = 10
+                train_mttr(model_dir)
+                train_state = {**train_state, "status": "done", "progress": 100,
+                               "message": "MTTR训练完成"}
+
             else:
                 train_state = {**train_state, "status": "error",
                                "message": f"未知模型: {model_name}"}
@@ -233,19 +285,77 @@ def model_status():
 
 @app.get("/api/temporal/analyze")
 def temporal_analyze(text: str):
-    """时序分析：提取四元组并做时序推理"""
+    """时序分析：提取四元组并做时序推理（规则+神经融合）"""
     raw_entities = recognizer.recognize(text)
     raw_relations = extractor.extract(text, raw_entities)
     quad_result = temporal_ext.extract_from_text(text, spn_triples=raw_relations)
-    temporal_rels = reasoner.reason(quad_result["quadruples"])
+    quads = quad_result["quadruples"]
+
+    # 规则版时序推理
+    rule_temporal = reasoner.reason(quads)
+
+    # 神经版时序推理（如果有模型）
+    neural_temporal = None
+    if mttr_model is not None and len(quads) >= 2:
+        try:
+            neural_temporal = _mttr_neural_infer(quads)
+        except Exception as e:
+            print(f"[MTTR] Neural inference failed: {e}")
+
+    # 融合：优先用神经结果，fallback到规则结果
+    final_temporal = neural_temporal if neural_temporal else rule_temporal
+
     return {
         "code": 200, "msg": "success",
         "data": {
-            "quadruples": quad_result["quadruples"],
-            "temporal_relations": temporal_rels,
+            "quadruples": quads,
+            "temporal_relations": final_temporal,
+            "rule_temporal": rule_temporal,
+            "neural_temporal": neural_temporal,
             "times": quad_result["times"],
         }
     }
+
+
+def _mttr_neural_infer(quads):
+    """用MTTR神经模型推理四元组对的时序关系"""
+    import torch
+    from itertools import combinations
+
+    results = []
+    for i, j in combinations(range(len(quads)), 2):
+        q_a, q_b = quads[i], quads[j]
+        text_a = f"{q_a['head']} {q_a['relation']} {q_a.get('tail', '')} {q_a.get('time', '')}".strip()
+        text_b = f"{q_b['head']} {q_b['relation']} {q_b.get('tail', '')} {q_b.get('time', '')}".strip()
+
+        enc_a = mttr_tokenizer(text_a, max_length=128, padding="max_length",
+                               truncation=True, return_tensors="pt")
+        enc_b = mttr_tokenizer(text_b, max_length=128, padding="max_length",
+                               truncation=True, return_tensors="pt")
+
+        with torch.no_grad():
+            out = mttr_model(
+                input_ids_a=enc_a["input_ids"],
+                attention_mask_a=enc_a["attention_mask"],
+                input_ids_b=enc_b["input_ids"],
+                attention_mask_b=enc_b["attention_mask"],
+            )
+            probs = torch.softmax(out["temporal_logits"], dim=-1)
+            pred_idx = probs.argmax(dim=-1).item()
+            confidence = probs[0, pred_idx].item()
+
+        temporal_rel = TEMPORAL_LIST[pred_idx]
+        results.append({
+            "triple_a": i,
+            "triple_b": j,
+            "triple_a_detail": f"{q_a['head']} {q_a['relation']} {q_a.get('tail', '')}",
+            "triple_b_detail": f"{q_b['head']} {q_b['relation']} {q_b.get('tail', '')}",
+            "temporal_rel": temporal_rel,
+            "confidence": round(confidence, 4),
+            "reason": f"neural_model (conf={confidence:.2f})",
+        })
+
+    return results
 
 
 @app.post("/api/align")

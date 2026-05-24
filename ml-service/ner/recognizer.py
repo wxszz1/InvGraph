@@ -79,15 +79,27 @@ class NerRecognizer:
                 seen.add(("industry", kw))
                 entities.append({"name": kw, "type": "Industry"})
 
-        # 6. 企业名称后缀匹配（只匹配未被识别的部分）
-        # 中文企业名
+        # 6. 企业名称后缀匹配（只匹配未被识别的部分，长名称优先）
+        # 中文企业名：先收集所有匹配，再按长度降序处理
         suffix_pattern = '|'.join(re.escape(s) for s in ENTERPRISE_SUFFIXES)
-        for match in re.finditer(rf'[一-鿿]{{2,8}}(?:{suffix_pattern})', text):
+        suffix_matches = list(re.finditer(rf'[一-鿿]{{2,12}}(?:{suffix_pattern})', text))
+        # 按匹配长度降序排列，优先处理长名称
+        suffix_matches.sort(key=lambda m: len(m.group()), reverse=True)
+        for match in suffix_matches:
             name = match.group()
-            if not any(name in e["name"] or e["name"] in name for e in entities):
-                if ("enterprise", name) not in seen:
-                    seen.add(("enterprise", name))
-                    entities.append({"name": name, "type": "Enterprise"})
+            # 如果已有实体是当前名称的子串，移除旧的短名称
+            shorter_indices = [i for i, e in enumerate(entities)
+                              if e["type"] == "Enterprise" and e["name"] in name and e["name"] != name]
+            for i in reversed(shorter_indices):
+                old_name = entities[i]["name"]
+                entities.pop(i)
+                seen.discard(("enterprise", old_name))
+            # 如果当前名称是已存在实体的子串，跳过
+            if any(name in e["name"] and name != e["name"] for e in entities):
+                continue
+            if ("enterprise", name) not in seen:
+                seen.add(("enterprise", name))
+                entities.append({"name": name, "type": "Enterprise"})
 
         # 6b. （移至步骤7b后处理，避免与投资者名冲突）
 
@@ -326,6 +338,10 @@ class NerRecognizer:
         """提取文本中的金额表达式"""
         amounts = []
         patterns = [
+            # 中文模糊数字（数亿、数十亿、数百亿等）
+            (r'数(十|百|千)?亿(?:美元|人民币)?', lambda m: f"数{m.group(1) or ''}亿元"),
+            (r'数(十|百|千)?万', lambda m: f"数{m.group(1) or ''}万元"),
+            # 数字+单位
             (r'(\d+(?:\.\d+)?)\s*亿美元', lambda m: f"{float(m.group(1)) * 10000}万美元"),
             (r'(\d+(?:\.\d+)?)\s*亿元?(?:人民币)?', lambda m: f"{m.group(1)}亿元"),
             (r'(\d+(?:\.\d+)?)\s*万美元', lambda m: f"{m.group(1)}万美元"),

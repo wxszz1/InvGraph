@@ -1,0 +1,2833 @@
+{
+  "pairs": [
+    {
+      "a": {
+        "name": "蓝驰创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "老虎基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "红杉中国",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Sequoia Capital China",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "天际汽车",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "掌门教育",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "国新基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "国家集成电路产业基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "蔚来",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "NIO",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "朝夕光年",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "春雨医生",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "东方富海",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "网易",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "春华资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Primavera Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "中投公司",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "成为资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "智谱AI",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "吉因加",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "深创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "深创投集团",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "鼎晖投资",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "联想创投",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "明略科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "万里目",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "AutoX",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "奇安信",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "险峰长青",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "成为资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "深信服",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "淘粉吧",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "京东",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "JD.com",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "成为资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "明势资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "明势资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "华为",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "经纬创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "北极光创投",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "鼎晖投资",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "太盟投资",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "嘉御资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "高榕资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "华大基因",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "壁仞科技",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "淡马锡",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "泛大西洋资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "贝瑞基因",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "书亦烧仙草",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "今日资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "阿里云峰基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "速腾聚创",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "深言科技",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "联想创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "360",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "编程猫",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "M Stand",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "威马汽车",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "云从科技",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "快手",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Kuaishou",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "古茗",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "有道精品课",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "思路迪",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "晶晨股份",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "爱钱进",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "孚能科技",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "饿了么",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Ele.me",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "美团",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Meituan",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "蚂蚁集团",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "美图秀秀",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "高榕资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "中科院创投",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "明势资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "博裕资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "君联资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "梅花创投",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "达晨财智",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Fortune Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "国开金融",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "KKR",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "德同资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "美团龙珠",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "阿里云峰基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "今日资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "云从科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "中通快递",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "同创伟业",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "晨兴资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "向前金控",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "镭神智能",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "阿维塔",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "百合网",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "真格基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "金沙江创投",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "影石Insta360",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "7分甜",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "小鹏",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "XPeng",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "黑芝麻智能",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "高途课堂",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "五源资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "5Y Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "大疆创新",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "人人贷",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "KKR",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "金沙江创投",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "中材科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "M Stand",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "沐瞳科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "iRobot中国",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "金沙江创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "GSR Ventures",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "字节跳动",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "高瓴资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "阿里巴巴",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "阿里",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "中信产业基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "德同资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "月之暗面",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "圆通速递",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "沪上阿姨",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "拍拍贷",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "阿里巴巴",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Alibaba",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "启明创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Qiming Venture Partners",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "IDG资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "IDG Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "鼎晖投资",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "CDH Investments",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "华兴资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "China Renaissance",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "中科院创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "腾讯",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "圣邦股份",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Manner咖啡",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "字节跳动",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "ByteDance",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "鲜丰水果",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "喜马拉雅",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "黑芝麻智能",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "微众银行",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "高合汽车",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "恩捷股份",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "孚能科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "百度云",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "深创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "中国互联网投资基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "高盛",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Goldman Sachs",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "鼎晖投资",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "中投公司",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "Insta360",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "全志科技",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "第四范式",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "甜啦啦",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "转转",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "蔚来汽车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "光速中国",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "今日资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "后摩智能",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "远成物流",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "北京政府引导基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "淡马锡",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "货拉拉",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "湊湊火锅",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "ONES",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "杉杉股份",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "ONES",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "京东数科",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "腾讯",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "鹅厂",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "君联资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "阿里云峰基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "拼多多",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Pinduoduo",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "金沙江创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "老虎基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "日日顺",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "芯驰科技",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "博裕资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "君联资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "马记永",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "深蓝汽车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "嘉银金科",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "陆金所",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "五源资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "险峰长青",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "阿里云峰基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "云九资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "摩根士丹利",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Morgan Stanley",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "ONES",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "天涯社区",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "阿里云",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "启源汽车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "4399",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "平安好医生",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "编程猫",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "全志科技",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "DCM中国",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "中投公司",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "中金资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "CICC Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "华平投资",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Warburg Pincus",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "华为",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "德同资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "联想创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "IDG资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "钉钉",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "格灵深瞳",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "老虎基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "美团",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "友邦保险",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "KKR",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "IDG资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "华平投资",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "每日优鲜",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "阶跃星辰",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "老虎基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "险峰长青",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "嘉御资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "五源资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "同创伟业",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "高瓴资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "德邦快递",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "喜茶",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "茶百道",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "蜜芽",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "深创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Shenzhen Capital Group",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "今日资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "达晨财智",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "中投公司",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "云九资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "红杉资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "德同资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "壁仞科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "百世快递",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "寒武纪",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Cambricon",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "淡马锡",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "君联资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "IDG资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "DST Global",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "轻舟智航",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "岚图汽车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "真格基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "ZhenFund",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "友邦保险",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "微博",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "联想创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "晨兴资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "红杉资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "红杉",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "春华资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "字节跳动",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "吉因加",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "仰望汽车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "泛大西洋资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "德同资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "有利网",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "百川智能",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "小红书",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Xiaohongshu",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "摩尔线程",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "什么值得买",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "莉莉丝游戏",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "小宇宙",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "豆瓣",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "紫光展锐",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "蓝驰创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "国新基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "思路迪",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "飞鱼科技",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "信也科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "CoCo都可",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "有利网",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "德邦快递",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "经纬创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "嘉御资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "蔚来资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "蓝驰创投",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "阿里云峰基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "嘉御资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "阿里云峰基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "阿里巴巴",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "百世快递",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "度小满",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "华平投资",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "KKR",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "经纬中国",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Matrix Partners China",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "高榕资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "阿里云峰基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "阿维塔",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Keep",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "启明创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "360",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "贝瑞基因",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "iRobot中国",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "基石资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "源码资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "CoCo都可",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "奇点汽车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "凯雷投资",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "The Carlyle Group",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "智谱AI",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "卓胜微",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "思瑞浦",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "仰望汽车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "Leangoo",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "高合汽车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "哔哩哔哩",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Bilibili",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "德同资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "斯凯网络",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "孚能科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "深言科技",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "米哈游",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "拍拍贷",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "梅花创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "基石资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "星源材质",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "金山文档",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "鹰瞳科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "小鹏汽车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "高瓴资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "高瓴",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "百度",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "BIDU",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "WiFi万能钥匙",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "妙手医生",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "华平投资",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "方源资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "亿纬锂能",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "天际股份",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "国家集成电路产业基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "创新工场",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "大疆",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "DJI",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "成为资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "中国互联网投资基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "微博",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "云九资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "达晨财智",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "联想创投",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "华创资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "成为资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "钟鼎资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "阿里云峰基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "春华资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "高榕资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "经纬创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Matrix Partners",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "亿纬锂能",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "太二酸菜鱼",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "理想",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Li Auto",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "险峰长青",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "KKR",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "巴奴毛肚火锅",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "中通快递",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "联想创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "蔚来资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "高榕资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "鼎晖投资",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "湊湊火锅",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "远成物流",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "金沙江创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "基石资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "荔枝微课",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "微医",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "泰合资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Tahe Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "太盟投资",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "CPE源峰",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "卓胜微",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "三七互娱",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "京东",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "国新基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "IDG资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "美团龙珠",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "蜂巢能源",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "依图科技",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "CPE源峰",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "蚂蚁金服",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "阿里云",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "瀚博半导体",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "文远知行",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "企业微信",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "GGV纪源资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "GGV Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "腾讯",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Tencent",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "美团买菜",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "萤石网络",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "网易",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "NetEase",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "高瓴资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "软银愿景基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "淘粉吧",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Leangoo",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "韦尔股份",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "思路迪",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "创新工场",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Sinovation Ventures",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "折800",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "人人贷",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "小米",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Xiaomi",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "红杉资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "东方富海",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "弘毅投资",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Legend Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "淡马锡",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Temasek",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "高瓴资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Hillhouse Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "天涯社区",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "百果园",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "遇见小面",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "拜腾汽车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "松禾资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "IDG资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "北京政府引导基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "钟鼎资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "积木盒子",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "喜茶",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "百度",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "BAI资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "商汤",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "SenseTime",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "五源资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "SK海力士",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "中科院创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "五源资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "百度",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Baidu",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "晨兴资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "美团龙珠",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "柔宇科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "Tower",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "红杉资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Sequoia Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "晨兴资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Shunwei Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "石头科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "神策数据",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "五源资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "经纬创投",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "数坤科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "朴朴超市",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "DCM中国",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "国家集成电路产业基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "中金公司",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "CICC",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "联想创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Lenovo Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "晨兴资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "深圳市政府引导基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "字节跳动",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "CVC资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "上海科创投",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "北极光创投",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "丁香园",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "编程猫",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "CoCo都可",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "朴朴超市",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "芯驰科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "寒武纪",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "瀚博半导体",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "企鹅杏仁",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "明势资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "老虎基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "360",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "国新基金",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "阿里巴巴",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "京东",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "IDG资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "IDG",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "新日电动车",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "寒武纪",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "高瓴资本",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "君联资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "字节跳动",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "字节",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "脉脉",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "如风达",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "恺英网络",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "朴朴超市",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "轻舟智航",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "日日顺",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "滴滴",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "DiDi",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "深言科技",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "新日电动车",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "淡马锡",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "同创伟业",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "软银愿景基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "SoftBank Vision Fund",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "真格基金",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "高榕资本",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "英特尔",
+        "type": "Investor"
+      },
+      "b": {
+        "name": "Intel Capital",
+        "type": "Investor"
+      }
+    },
+    {
+      "a": {
+        "name": "比亚迪电池",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "药京采",
+        "type": "Enterprise"
+      }
+    },
+    {
+      "a": {
+        "name": "UU跑腿",
+        "type": "Enterprise"
+      },
+      "b": {
+        "name": "新宙邦",
+        "type": "Enterprise"
+      }
+    }
+  ],
+  "labels": [
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0,
+    1,
+    0,
+    1,
+    0,
+    0
+  ]
+}
